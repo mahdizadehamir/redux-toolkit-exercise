@@ -7,7 +7,7 @@ function Numbers() {
   const dispatch = useDispatch();
   return (
     <div>
-      MY Number is {number}
+      <h2>MY Number is {number}</h2>
       <button onClick={() => dispatch(increment())}>increment num</button>
       <button onClick={() => dispatch(decrement())}>decrement num</button>
     </div>

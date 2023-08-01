@@ -12,7 +12,7 @@ function Counter() {
   const [value, setValue] = useState(2);
   return (
     <div>
-      <p>Counter is {counter}</p>
+      <h2>Counter is {counter}</h2>
       <button onClick={() => dispatch(increment())}>increment</button>
       <button onClick={() => dispatch(decrement())}>decrement</button>
       <input
