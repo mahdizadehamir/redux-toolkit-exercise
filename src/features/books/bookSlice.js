@@ -1,8 +1,12 @@
 import { createEntityAdapter, createSlice } from "@reduxjs/toolkit";
 
-const booksAdapter = createEntityAdapter({
-  sortComparer: (a, b) => a.title.localCompare(b.title),
-});
+const booksAdapter = createEntityAdapter();
+
+export const {
+  selectAll:selectAllBooks,
+  selectById:selectBooksById,
+  selectTotal:selectTotalBooks
+} = booksAdapter.getSelectors(state => state.books)
 
 const bookSelector = booksAdapter.getSelectors(state => state.books)
 
